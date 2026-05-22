@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 300px;
+  background: #222;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#display {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  text-align: right;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 16px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:active {
+  background: #444;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* Operator color */
+button:nth-child(4n + 3),
+button:nth-child(4n + 4) {
+  background: #ff9500;
+}
+
+button:nth-child(4n + 3):hover,
+button:nth-child(4n + 4):hover {
+  background: #ffb040;
+}
+
+button:nth-child(4n + 3):active,
+button:nth-child(4n + 4):active {
+  background: #d07500;
+}
